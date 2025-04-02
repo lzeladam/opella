@@ -1,35 +1,35 @@
-output "bootstrap_storage_account_name" {
-  description = "The name of the storage account created for Terraform state"
-  value       = module.bootstrap_storage.storage_account_name
-}
+#output "bootstrap_storage_account_name" {
+#  description = "The name of the storage account created for Terraform state"
+#  value       = module.bootstrap_storage.storage_account_name
+#}
+#
+#output "bootstrap_storage_account_id" {
+#  description = "The ID of the storage account created for Terraform state"
+#  value       = module.bootstrap_storage.storage_account_id
+#}
+#
+#output "bootstrap_container_name" {
+#  description = "The name of the blob container created for Terraform state"
+#  value       = module.bootstrap_storage.container_name
+#}
 
-output "bootstrap_storage_account_id" {
-  description = "The ID of the storage account created for Terraform state"
-  value       = module.bootstrap_storage.storage_account_id
-}
+#output "bootstrap_primary_access_key" {
+#  description = "The primary access key for the storage account"
+#  value       = module.bootstrap_storage.primary_access_key
+#  sensitive   = true
+#}
 
-output "bootstrap_container_name" {
-  description = "The name of the blob container created for Terraform state"
-  value       = module.bootstrap_storage.container_name
-}
-
-output "bootstrap_primary_access_key" {
-  description = "The primary access key for the storage account"
-  value       = module.bootstrap_storage.primary_access_key
-  sensitive   = true
-}
-
-output "bootstrap_terraform_backend_config" {
-  description = "Configuration string for backend.tf"
-  value       = <<-EOT
-    backend "azurerm" {
-      resource_group_name  = "${var.resource_group_name}"
-      storage_account_name = "${module.bootstrap_storage.storage_account_name}"
-      container_name       = "${module.bootstrap_storage.container_name}"
-      key                  = "terraform.tfstate"
-    }
-  EOT
-}
+#output "bootstrap_terraform_backend_config" {
+#  description = "Configuration string for backend.tf"
+#  value       = <<-EOT
+#    backend "azurerm" {
+#      resource_group_name  = "${var.resource_group_name}"
+#      storage_account_name = "${module.bootstrap_storage.storage_account_name}"
+#      container_name       = "${module.bootstrap_storage.container_name}"
+#      key                  = "terraform.tfstate"
+#    }
+#  EOT
+#}
 
 output "vnet_id" {
   description = "The ID of the Virtual Network"

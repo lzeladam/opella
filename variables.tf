@@ -8,15 +8,15 @@ variable "location" {
   type        = string
 }
 
-variable "storage_account_name" {
-  description = "Nombre del Storage Account"
-  type        = string
-}
-
-variable "container_name" {
-  description = "Nombre del contenedor en el Storage Account"
-  type        = string
-}
+#variable "storage_account_name" {
+#  description = "Nombre del Storage Account"
+#  type        = string
+#}
+#
+#variable "container_name" {
+#  description = "Nombre del contenedor en el Storage Account"
+#  type        = string
+#}
 variable "vnet_name" {}
 variable "address_space" {
   type = list(string)
